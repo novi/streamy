@@ -2,7 +2,7 @@ var EventEmitter = require('events').EventEmitter
   , path = require('path')
   , util = require('util')
 
-  , findit = require('findit')
+  , walker = require('walker')
 
 var FORMATS = ['.mp3', '.m4a'] //supported formats
 
@@ -34,7 +34,7 @@ util.inherits(MusicLibrary, EventEmitter)
 MusicLibrary.prototype.populate = function () {
   var self = this
     , root = this.opts.root || path.join(__dirname, '/public/music')
-    , finder = findit.find(root)
+    , finder = walker(root)
   
   //  cache music library for socket connections
   finder.on('file', function(fpath, stat) {

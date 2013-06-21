@@ -6,7 +6,7 @@ $(function() {
       _.bindAll(this, 'render', 'play');   //conserve 'this' object
     },
     events: {
-      'dblclick': 'play'
+      'click': 'play'
     },
     tagName: 'li',
     render: function() {

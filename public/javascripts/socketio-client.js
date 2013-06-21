@@ -4,7 +4,7 @@
 	socketSource.id = 'socket.io';
 	document.head.appendChild(socketSource);
 	socketSource.addEventListener('load', function() {
-		window.socket = io.connect(window.location.hostname, {port: 3000, rememberTransport: false});
+		window.socket = io.connect(window.location.hostname, {port: 3010, rememberTransport: false});
 		socket.on('connect', function() {
 			console.log('socket client connected');
 		});

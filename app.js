@@ -80,7 +80,7 @@ app.get('/stream/:song', function(req, res) {
   })
 })
 
-var PORT = 3000
+var PORT = 3010
 
 app.listen(PORT)
 console.log("STREAMY: listening on port", PORT)
